@@ -1,3 +1,5 @@
+'''
+
 #exception file read
 
 import os 
@@ -114,4 +116,67 @@ with open("temp.txt", "r") as f:
     #for i in range(110):
     #    res = f.readline()
     #    print(res)
+    
+'''
+'''
+#속성 출력
+
+class Person :
+    name = "python"
+    age = 23
+    number ="01012345678"
+    
+    def getIntroduce(self):
+        return f"My name is {self.name}"
+    
+p = Person()
+print(p.name)
+print(p.age)
+print(p.number)
+print(p.getIntroduce())
+
+p1 = Person()
+print(p1.name)
+print(p1.age)
+print(p1.number)
+'''
+
+#클래스 초기화
+'''
+class Person :
+    def __init__(self, name, age, number):
+        self.name = name
+        self.age = age
+        self.number = number
+        
+p = Person("helllo", 24, "01087654321")
+p1 = Person("he", 21, "0108")
+p2 = Person("hee", 24, "028764321")
+
+print(p.name)
+print(p1.name)
+print(p2.name)
+
+'''
+#클래스
+
+class Person :
+    def __init__(self, name, age, number):
+        self.name = name
+        self.age = age
+        self.number = number
+        Person.count += 1
+        
+p = Person("helllo", 24, "01087654321")
+print(p.name)
+print(p.getCount())
+p1 = Person("he", 21, "0108")
+print(p1.name)
+print(p1.getCount())
+p2 = Person("hee", 24, "028764321")
+print(p2.name)
+print(p2.getCount())
+
+
+
     
